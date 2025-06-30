@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default async function AdminMenuPage() {
   const { data } = await axios.get(
-    "https://fooddelivery-backend-ic50.onrender.com/foods"
+    "https://fooddelivery-backend-zyay.onrender.com"
   );
   // const [selectedCategory, setSelectedCategory] = useState("all");
   return (

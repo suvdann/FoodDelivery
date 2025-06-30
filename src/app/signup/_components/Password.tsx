@@ -38,13 +38,10 @@ export const CreatePassword = ({ backHandler, email }: Props) => {
     validationSchema: validationSchemaLogin,
     onSubmit: async (values) => {
       try {
-        const response = await axios.post(
-          "https://fooddelivery-backend-ic50.onrender.com/signup",
-          {
-            email: email,
-            password: values.password,
-          }
-        );
+        const response = await axios.post("/signup", {
+          email: email,
+          password: values.password,
+        });
 
         // console.log(response, "response");
         router.push("/login");

@@ -25,14 +25,11 @@ const AdminOrderPage = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     const getAdminOrders = async () => {
-      const { data } = await axios.get(
-        "https://fooddelivery-backend-ic50.onrender.com/admin/getAllOrders",
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const { data } = await axios.get("/admin/getAllOrders", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       console.log(data, "dataaaaaaaaaaaaa ");
       setOrder(data.orders);
     };
@@ -75,7 +72,7 @@ const AdminOrderPage = () => {
     }));
 
     await axios.put(
-      "https://fooddelivery-backend-ic50.onrender.com/admin/order/update",
+      "/admin/order/update",
       {
         orders: prepare,
       },
