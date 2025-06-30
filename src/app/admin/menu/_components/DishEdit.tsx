@@ -83,13 +83,16 @@ export const DishEdit = ({
         }
       );
       const img = await result.json();
-      await axios.put("http://localhost:8000/addfood", {
-        foodName: foodName,
-        price: price,
-        category: category,
-        ingredients: ingredients,
-        image: img.secure_url,
-      });
+      await axios.put(
+        "https://fooddelivery-backend-ic50.onrender.com/addfood",
+        {
+          foodName: foodName,
+          price: price,
+          category: category,
+          ingredients: ingredients,
+          image: img.secure_url,
+        }
+      );
     } catch (err) {}
   };
   return (

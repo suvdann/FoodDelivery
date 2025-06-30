@@ -5,8 +5,9 @@ import { Hero } from "./_components/hero";
 import axios from "axios";
 
 export default async function Homepage() {
-  const { data } = await axios.get("http://localhost:8000/foods");
-
+  const { data } = await axios.get(
+    "https://fooddelivery-backend-ic50.onrender.com/foods"
+  );
   return (
     <div className="bg-[#404040] w-full h-full flex flex-col  justify-center items-center">
       <div className="w-full">
@@ -21,4 +22,3 @@ export default async function Homepage() {
     </div>
   );
 }
-//

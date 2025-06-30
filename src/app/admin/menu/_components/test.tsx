@@ -73,13 +73,16 @@ export const AddNewDish = ({
         }
       );
       const img = await result.json();
-      await axios.post("http://localhost:8000/createFood", {
-        foodName: foodName,
-        price: price,
-        image: img.secure_url,
-        ingredients: ingredients,
-        categoryId: categoryId,
-      });
+      await axios.post(
+        "https://fooddelivery-backend-ic50.onrender.com/createFood",
+        {
+          foodName: foodName,
+          price: price,
+          image: img.secure_url,
+          ingredients: ingredients,
+          categoryId: categoryId,
+        }
+      );
 
       // setFoods((prev) => ({
       //   ...prev,

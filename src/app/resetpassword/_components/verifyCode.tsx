@@ -39,11 +39,14 @@ export const VerifyCode = ({ nextHandler, backHandler }: Props) => {
       return;
     }
     try {
-      const res = await fetch("http://localhost:8000/checkOpt", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code, email }),
-      });
+      const res = await fetch(
+        "https://fooddelivery-backend-ic50.onrender.com/checkOpt",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ code, email }),
+        }
+      );
 
       const data = await res.text();
 
@@ -117,11 +120,14 @@ export const VerifyCode = ({ nextHandler, backHandler }: Props) => {
 
               try {
                 // Кодыг дахин илгээх
-                await fetch("http://localhost:8000/sendCode", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({ email }),
-                });
+                await fetch(
+                  "https://fooddelivery-backend-ic50.onrender.com/sendCode",
+                  {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email }),
+                  }
+                );
 
                 alert("Код дахин илгээгдлээ");
 

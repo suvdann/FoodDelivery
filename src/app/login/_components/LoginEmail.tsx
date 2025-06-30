@@ -40,10 +40,13 @@ export const LoginEmail = () => {
     validationSchema: validationSchemaLogin,
     onSubmit: async (values) => {
       try {
-        const response = await axios.post("http://localhost:8000/login", {
-          email: values.email,
-          password: values.password,
-        });
+        const response = await axios.post(
+          "https://fooddelivery-backend-ic50.onrender.com/login",
+          {
+            email: values.email,
+            password: values.password,
+          }
+        );
 
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("email", values.email);

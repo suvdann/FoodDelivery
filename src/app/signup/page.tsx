@@ -6,9 +6,7 @@ import { CreatePassword } from "./_components/Password";
 import { useAuth } from "../_components/UserProvider";
 import { redirect } from "next/navigation";
 
-
-
-const Homepage = () => {
+const SignUpPage = () => {
   const arr = [SignLeft, CreatePassword];
   const [index, setIndex] = useState(0);
   const changeHandler = () => {
@@ -20,10 +18,10 @@ const Homepage = () => {
   const Stepper = arr[index];
 
   const [email, setEmail] = useState("");
- const {user, tokenChecker}=useAuth()
- if(user){
-  redirect("/")
- }
+  const { user, tokenChecker } = useAuth();
+  if (user) {
+    redirect("/");
+  }
   return (
     <div className="w-screen h-screen flex p-5">
       <div className=" flex-1/5 h-full justify-center">
@@ -40,4 +38,4 @@ const Homepage = () => {
     </div>
   );
 };
-export default Homepage;
+export default SignUpPage;

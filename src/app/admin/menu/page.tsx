@@ -1,11 +1,11 @@
-import { useState } from "react";
 import { DishCategoryTabs } from "./_components/DishCategoryTabs";
 import { DishList } from "./_components/DishList";
 import axios from "axios";
-import { DishEdit } from "./_components/DishEdit";
 
 export default async function AdminMenuPage() {
-  const { data } = await axios.get("http://localhost:8000/foods");
+  const { data } = await axios.get(
+    "https://fooddelivery-backend-ic50.onrender.com/foods"
+  );
   // const [selectedCategory, setSelectedCategory] = useState("all");
   return (
     <div>

@@ -74,13 +74,16 @@ export const AddDish = ({ category }: { category: string }) => {
       console.log(formData, "cloudnary dataa");
       const img = await result.json();
       console.log(img.secure_url);
-      await axios.post("http://localhost:8000/addfood", {
-        foodName: foodName,
-        price: price,
-        category: category,
-        ingredients: ingredients,
-        image: img.secure_url,
-      });
+      await axios.post(
+        "https://fooddelivery-backend-ic50.onrender.com/addfood",
+        {
+          foodName: foodName,
+          price: price,
+          category: category,
+          ingredients: ingredients,
+          image: img.secure_url,
+        }
+      );
     } catch (err: any) {
       alert(err.response.data.message);
     }

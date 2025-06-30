@@ -26,7 +26,7 @@ const AdminOrderPage = () => {
     const token = localStorage.getItem("token");
     const getAdminOrders = async () => {
       const { data } = await axios.get(
-        "http://localhost:8000/admin/getAllOrders",
+        "https://fooddelivery-backend-ic50.onrender.com/admin/getAllOrders",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -75,7 +75,7 @@ const AdminOrderPage = () => {
     }));
 
     await axios.put(
-      "http://localhost:8000/admin/order/update",
+      "https://fooddelivery-backend-ic50.onrender.com/admin/order/update",
       {
         orders: prepare,
       },
