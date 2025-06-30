@@ -40,7 +40,7 @@ export const VerifyCode = ({ nextHandler, backHandler }: Props) => {
     }
     try {
       const res = await fetch(
-        "https://fooddelivery-backend-zyay.onrender.com/checkOpt",
+        "https://fooddelivery-backend-goes.onrender.com/checkOpt",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

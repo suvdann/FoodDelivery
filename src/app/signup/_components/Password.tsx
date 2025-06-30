@@ -39,7 +39,7 @@ export const CreatePassword = ({ backHandler, email }: Props) => {
     onSubmit: async (values) => {
       try {
         const response = await axios.post(
-          "https://fooddelivery-backend-zyay.onrender.com/signup",
+          "https://fooddelivery-backend-goes.onrender.com/signup",
           {
             email: email,
             password: values.password,

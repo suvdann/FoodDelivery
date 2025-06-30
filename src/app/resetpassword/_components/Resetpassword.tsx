@@ -17,7 +17,7 @@ export const Resetpassword = ({ nextHandler }: Props) => {
   const handleSendCode = async () => {
     try {
       const res = await axios.post(
-        "https://fooddelivery-backend-zyay.onrender.com/sendCode",
+        "https://fooddelivery-backend-goes.onrender.com/sendCode",
         { email }
       );
 

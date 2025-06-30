@@ -36,7 +36,7 @@ export const OrderHistory = () => {
     const fetchOrders = async () => {
       try {
         const { data } = await axios.get(
-          "https://fooddelivery-backend-zyay.onrender.com/getOrder",
+          "https://fooddelivery-backend-goes.onrender.com/getOrder",
           {
             headers: {
               Authorization: `Bearer ${token}`,

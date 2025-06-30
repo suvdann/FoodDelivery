@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
     try {
       console.log("Working");
       const response = await axios.post(
-        "https://fooddelivery-backend-zyay.onrender.com/verify",
+        "https://fooddelivery-backend-goes.onrender.com/verify",
         {
           token: token,
         }

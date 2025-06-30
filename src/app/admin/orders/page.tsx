@@ -26,7 +26,7 @@ const AdminOrderPage = () => {
     const token = localStorage.getItem("token");
     const getAdminOrders = async () => {
       const { data } = await axios.get(
-        "https://fooddelivery-backend-zyay.onrender.comadmin/getAllOrders",
+        "https://fooddelivery-backend-goes.onrender.com/getAllOrders",
         {
           headers: {
             Authorization: `Bearer ${token}`,

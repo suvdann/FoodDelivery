@@ -75,7 +75,7 @@ export const AddDish = ({ category }: { category: string }) => {
       const img = await result.json();
       console.log(img.secure_url);
       await axios.post(
-        "https://fooddelivery-backend-zyay.onrender.com/addfood",
+        "https://fooddelivery-backend-goes.onrender.com/addfood",
         {
           foodName: foodName,
           price: price,

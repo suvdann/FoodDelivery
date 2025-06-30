@@ -84,7 +84,7 @@ export const DishEdit = ({
       );
       const img = await result.json();
       await axios.put(
-        "https://fooddelivery-backend-zyay.onrender.com/addfood",
+        "https://fooddelivery-backend-goes.onrender.com/addfood",
         {
           foodName: foodName,
           price: price,

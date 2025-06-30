@@ -6,7 +6,7 @@ import axios from "axios";
 
 export default async function Homepage() {
   const { data } = await axios.get(
-    "https://fooddelivery-backend-zyay.onrender.com"
+    "https://fooddelivery-backend-goes.onrender.com/foods"
   );
   console.log("asd");
 
