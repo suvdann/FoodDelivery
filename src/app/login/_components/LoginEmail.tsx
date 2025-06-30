@@ -41,7 +41,7 @@ export const LoginEmail = () => {
     onSubmit: async (values) => {
       try {
         const response = await axios.post(
-          "https://fooddelivery-backend-ic50.onrender.com/login",
+          "https://fooddelivery-backend-zyay.onrender.com/login",
           {
             email: values.email,
             password: values.password,

@@ -87,7 +87,7 @@ export const OrderDetails = () => {
 
     try {
       const res = await axios.post(
-        "/createOrder",
+        "https://fooddelivery-backend-zyay.onrender.comcreateOrder",
         {
           userId: user?.userId,
           address,

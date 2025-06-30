@@ -35,11 +35,14 @@ export const OrderHistory = () => {
     const token = localStorage.getItem("token");
     const fetchOrders = async () => {
       try {
-        const { data } = await axios.get("/getOrder", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const { data } = await axios.get(
+          "https://fooddelivery-backend-zyay.onrender.com/getOrder",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
         // console.log(data.orders, "orderdata");
         setOrderData(data.orders);
       } catch (error) {
