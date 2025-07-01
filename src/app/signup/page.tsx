@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { SignLeft } from "../signup/_components/SignLeft";
-import { SignRight } from "../signup/_components/SignRight";
+import { SignLeft } from "./_components/SignLeft";
+import { SignRight } from "./_components/SignRight";
 import { CreatePassword } from "./_components/Password";
 import { useAuth } from "../_components/UserProvider";
 import { redirect } from "next/navigation";
