@@ -29,14 +29,15 @@ export const Header = () => {
   //   redirect("/login"); // login хуудас руу шилжүүлнэ
   // };
   return (
-    <div className=" w-full bg-black flex  items-center justify-between p-3">
-      <div className=" left-[64px] cursor-pointer">
+    <div className="  w-full bg-black flex  items-center justify-between p-3">
+      <div className=" ml-[64px] cursor-pointer">
         <Image
           onClick={() => redirect("/")}
           src={"/LogoContainer.png"}
           alt="header logo"
           width={146}
-          height={146}
+          height={44}
+          // fill
         />
       </div>
       <div className="flex items-center">
@@ -45,7 +46,7 @@ export const Header = () => {
             <MapPin className="w-[20px] h-[20px]" />
             <div>Delivery address:</div>
           </div>
-          
+
           <Input
             className="border-none focus:outline-none p-0  text-[12px]"
             placeholder="Add location"
@@ -67,16 +68,19 @@ export const Header = () => {
               </p>
               <div className="flex gap-3 rounded-xl   bg-[#F4F4F5]">
                 <Button
-                  onClick={()=>redirect("/signup")}
+                  onClick={() => redirect("/signup")}
                   variant={"outline"}
                   className="rounded-full w-[80px] h-[36px] bg-[#F4F4F5]"
                 >
                   Sign out
                 </Button>
-                <Button variant={"outline"} 
-                onClick={()=>redirect("/login")}
-                   className="rounded-full w-[80px] h-[36px] bg-[#F4F4F5]"
-                >Log out</Button>
+                <Button
+                  variant={"outline"}
+                  onClick={() => redirect("/login")}
+                  className="rounded-full w-[80px] h-[36px] bg-[#F4F4F5]"
+                >
+                  Log out
+                </Button>
               </div>
             </PopoverContent>
           </Popover>

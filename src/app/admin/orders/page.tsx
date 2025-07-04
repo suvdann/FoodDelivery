@@ -6,6 +6,9 @@ import { StateChanger } from "./_components/stateChanger";
 import { DataTable } from "./_components/Table";
 import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
+import { redirect } from "next/navigation";
+
+import { useAuth } from "@/app/_components/UserProvider";
 // import { DateFilter } from "./_components/DateFilter";
 // import { DataTable } from "./_components/Table";
 enum orderStatusType {
@@ -21,7 +24,12 @@ const AdminOrderPage = () => {
   );
   const [startDate, setStartDate] = useState<Date | undefined>();
   const [endDate, setEndDate] = useState<Date | undefined>();
-
+  const { user } = useAuth();
+  // if (user?.isAdmin) {
+  //   redirect("/admin/orders");
+  // } else {
+  //   redirect("/");
+  // }
   useEffect(() => {
     const token = localStorage.getItem("token");
     const getAdminOrders = async () => {
@@ -33,7 +41,7 @@ const AdminOrderPage = () => {
           },
         }
       );
-      console.log(data, "dataaaaaaaaaaaaa ");
+      // console.log(data, "dataaaaaaaaaaaaa ");
       setOrder(data.orders);
     };
 

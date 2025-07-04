@@ -13,12 +13,9 @@ import { redirect } from "next/navigation";
 // };
 
 const LoginPage = () => {
-  const { user, tokenChecker } = useAuth();
-  const [index, setIndex] = useState(0);
+  const { user } = useAuth();
+  // const [index, setIndex] = useState(0);
 
-  // const changeHandler = () => {
-  //   setIndex((prev) => prev + 1);
-  // };
   if (user?.userId) {
     if (user?.isAdmin) {
       redirect("/admin/orders");
@@ -26,6 +23,7 @@ const LoginPage = () => {
       redirect("/");
     }
   }
+  // if()
   return (
     <div className="w-screen h-screen flex p-5">
       <div className=" flex-1/5 h-full justify-center">

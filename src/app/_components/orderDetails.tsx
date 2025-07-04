@@ -282,13 +282,6 @@ export const OrderDetails = () => {
                     </div>
                     <div className="flex  justify-between">
                       <p className="text-[#71717A] text-[16px]">Total:</p>
-                      <p className="font-bold">
-                        {cartItems.reduce(
-                          (total, item) => total + item.price * item.quantity,
-                          0
-                        )}
-                        ;$
-                      </p>
 
                       <p className="text-[28px] font-bold">
                         {calculateTotal()}$

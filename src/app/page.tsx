@@ -16,7 +16,7 @@ export default async function Homepage() {
         <Header />
       </div>
       <Hero />
-      <div className="flex">
+      <div className="flex items-center justify-center">
         <Cards foods={data.foods} />
       </div>
 

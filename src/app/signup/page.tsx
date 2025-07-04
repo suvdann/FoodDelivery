@@ -22,6 +22,7 @@ const SignUpPage = () => {
   if (user) {
     redirect("/");
   }
+
   return (
     <div className="w-screen h-screen flex p-5">
       <div className=" flex-1/5 h-full justify-center">

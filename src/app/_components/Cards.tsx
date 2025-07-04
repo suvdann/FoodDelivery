@@ -25,7 +25,7 @@ export const Cards = ({ foods }: PropsType) => {
         return (
           <div key={el} className="flex flex-col ">
             <h2 className="text-[30px] text-black font-semibold "> {el}</h2>
-            <div className="flex flex-wrap  grid-cols-3 justify-center gap-4">
+            <div className="flex flex-wrap  grid-cols-3  justify-center gap-4">
               {foods[el].slice(0, 6).map((food) => {
                 return (
                   <div key={food._id} className="flex  ">
