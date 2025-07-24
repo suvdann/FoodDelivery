@@ -156,6 +156,12 @@ export const DishEdit = ({
                 <Label className="text-[#71717A] text-[12px]">Price</Label>
                 <Input id="username-1" name="username" />
               </div>
+
+              <div>
+                {" "}
+                <Label className="text-[#71717A] text-[12px]">Image </Label>
+                <Input className="" />
+              </div>
             </div>
             <DialogFooter className="w-full flex justify-between items-center">
               <DialogClose asChild>

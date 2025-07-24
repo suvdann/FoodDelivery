@@ -34,13 +34,14 @@ const AdminOrderPage = () => {
     const token = localStorage.getItem("token");
     const getAdminOrders = async () => {
       const { data } = await axios.get(
-        "https://fooddelivery-backend-goes.onrender.com/getAllOrders",
+        "https://fooddelivery-backend-goes.onrender.com/admin/getAllOrders",
         {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         }
       );
+
       // console.log(data, "dataaaaaaaaaaaaa ");
       setOrder(data.orders);
     };
