@@ -40,7 +40,7 @@ export type PropsType = {
 };
 export const DishList = ({ foods }: PropsType) => {
   const keys = Object.keys(foods);
-  console.log(foods, "darrararrraarar");
+  // console.log(foods, "darrararrraarar");
   return (
     <div>
       <div className="flex flex-col ">
